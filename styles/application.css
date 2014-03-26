@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+}
+
+.borders {
+  xorder-top: 1px solid #ddd;
+  xorder-bottom: 1px solid #ddd;
+  padding: 20px;
+  margin: 20px 0;
+}
+.red {
+  color: #d61c1c;
+}
+
+.middle {
+  line-height: 480px;
+  height: 100%;
+  width: 50%;
+}
+
+h1, h2, h3, h4, .nav-links, .content {
+  color: #000;
+  font-family: "Press Start 2P", arial;
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, .content {
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 200px;
+  text-align: center;
+  margin: 40px;
+}
+
+h2 {
+  font-size: 20px;
+  color: #555;
+}
+
+h3 {
+  font-size: 20px;
+  color: #555;
+}
+
+h4 {
+  font-size: 20px;
+  color: #000;
+}
+
+.content {
+  margin: 40px;
+  font-size: 10px;
+  color: #000;
+}
+
+.nav-links ul {
+  display: block;
+  height: 20px;
+}
+
+.nav-links a {
+  display: block;
+  line-height: 20px;
+  font-size: 15px;
+  color: #888;
+  text-decoration: none;
+  -webkit-transition: font-size 100ms ease-in-out, color 100ms ease-in-out;
+  transition: font-size 100ms ease-in-out, color 100ms ease-in-out;
+}
+
+.nav-links a:hover, .nav-links .active {
+  font-size: 20px;
+  color: #aaa;
+  text-decoration: none;
+}
+
+.nav-links a.active {
+  font-size: 20px;
+  color: #222;
+  text-decoration: none;
+}
+
+.nav-links a.active:hover {
+  color: #222;
+}
+
+img {
+  max-width: 100%;
+  z-index: -1;
+}
+
+.post {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.post p {
+  text-align: left;
+}
+
+.date {
+  color: #aaa;
+  margin-bottom: 20px;
+  display: block;
+}
