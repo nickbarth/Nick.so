@@ -1,6 +1,8 @@
 * {
   margin: 0;
   padding: 0;
+  border: 0;
+  text-decoration: none !important;
 }
 
 body {
@@ -39,9 +41,14 @@ h1 {
   margin: 20px;
 }
 
+h2.title {
+  color: #000;
+}
+
 h2 {
   font-size: 20px;
   color: #555;
+  color: #888;
 }
 
 h3 {
@@ -63,20 +70,21 @@ h4 {
 .nav-links ul {
   display: block;
   height: 20px;
+  margin: 00px 0 40px;
 }
 
 .nav-links a {
   display: block;
   line-height: 20px;
-  font-size: 15px;
+  font-size: 20px;
   color: #888;
   text-decoration: none;
-  -webkit-transition: font-size 100ms ease-in-out, color 100ms ease-in-out;
-  transition: font-size 100ms ease-in-out, color 100ms ease-in-out;
+  -webkit-transition: all 100ms ease-in-out, color 100ms ease-in-out;
+  transition: all 100ms ease-in-out, color 100ms ease-in-out;
 }
 
 .nav-links a:hover, .nav-links .active {
-  font-size: 20px;
+  font-size: 30px;
   color: #aaa;
   text-decoration: none;
 }
@@ -99,14 +107,26 @@ img {
 .post {
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
+  font-size: 12px;
 }
 
 .post p {
   text-align: left;
+  font-family: Andale Mono, Lucida Console, Courier New, monospace;
+  line-height: 20px;
 }
 
 .date {
   color: #aaa;
+  font-size: 10px;
   margin-bottom: 20px;
   display: block;
+}
+
+.selfie {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  amargin-top: -20px;
+  height: 200px;
 }
