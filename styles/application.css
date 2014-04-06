@@ -7,10 +7,11 @@
 
 body {
   background: #fff;
+  color: #000;
 }
 
-body.home {
-  background: #d61c1c;
+a, a:hover {
+  color: #000;
 }
 
 .borders {
@@ -20,14 +21,9 @@ body.home {
   margin: 20px 0;
 }
 
-.red {
+.highlight {
   color: #d61c1c;
 }
-
-.home .red {
-  color: #eee;
-}
-
 
 .middle {
   line-height: 480px;
@@ -36,7 +32,6 @@ body.home {
 }
 
 h1, h2, h3, h4, .nav-links, .content {
-  color: #000;
   font-family: "Orbitron", arial;
   font-weight: normal;
   font-style: normal;
@@ -52,24 +47,17 @@ h1 {
   margin: 20px;
 }
 
-.home h2 {
-  font-size: 20px;
-  color: #eee;
-}
-
 h2 {
   font-size: 20px;
-  color: #aaa;
+  color: #000;
 }
 
 h2.header {
   font-size: 30px;
-  color: #000;
 }
 
 h2.title {
   font-size: 50px;
-  color: #000;
 }
 
 h3 {
@@ -79,13 +67,11 @@ h3 {
 
 h4 {
   font-size: 20px;
-  color: #000;
 }
 
 .content {
   margin: 20px;
   font-size: 10px;
-  color: #000;
 }
 
 .nav-links ul {
@@ -98,7 +84,7 @@ h4 {
   display: block;
   line-height: 20px;
   font-size: 20px;
-  color: #eee;
+  color: #000;
   text-decoration: none;
   -webkit-transition: all 100ms ease-in-out, color 100ms ease-in-out;
   transition: all 100ms ease-in-out, color 100ms ease-in-out;
@@ -106,7 +92,7 @@ h4 {
 
 .nav-links a:hover, .nav-links .active {
   font-size: 30px;
-  color: #ddd;
+  color: #f00;
   text-decoration: none;
 }
 
