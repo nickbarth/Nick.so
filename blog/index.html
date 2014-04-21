@@ -30,6 +30,33 @@
           <div class="col-md-12 text-center">
             <div class="content">
               <div class="post">
+                <h2 class="title">Ports and Netcats</h2>
+                <span class="date">Sunday, April 20, 2014</span>
+                <p>
+                  Port forwarding and Netcat can be incredibly useful and powerful
+                  tools for web development as much as they are for dev ops. Here's
+                  a few quick useful commands.
+                </p>
+                <h3>ssh -NL 9000:localhost:9000 root@example.com</h3>
+                <p>
+                  This command lets you forward a remote port to your localhost so,
+                  you'll be able to access localhost:9000 in your browser.
+                </p>
+                <h3>ssh -NR 9000:localhost:9000 root@example.com</h3>
+                <p>
+                  This command lets you serve whatever is running on your local
+                  9000 port to your server. This could be useful for developing
+                  a database locally.
+                </p>
+                <h3>socat TCP-LISTEN:5000,fork TCP:localhost:9000</h3>
+                <h3>nc -lp 5000 < backpipe | nc localhost 9000 > backpipe</h3>
+                <p>
+                  Socat is useful when streaming data from one port to another.
+                  Alternatively, you could backpipe the data with netcat, but
+                  socat seems better equipt for higher traffic networking.
+                </p>
+              </div>
+              <div class="post">
                 <h2 class="title">Brand and Logo Design</h2>
                 <span class="date">Saturday, April 5, 2014</span>
                 <p>
