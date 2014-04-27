@@ -51,14 +51,14 @@ main {
   width: 100%;
   color: #fff;
   height: 500px;
-  background: url(/images/bike.jpg);
-  background: url(/images/science.png);
+  background: url(/images/desk.jpg);
   background-size: cover;
   position: relative;
 }
 
 .hero-unit .color {
   background: rgba(100, 200, 240, 0.8);
+  background: rgba(0, 0, 0, 0.2);
   height: 100%;
 }
 
@@ -69,6 +69,7 @@ main {
 
 .hero-text h2 {
   color: rgba(0, 0, 0, 0.6);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 100px;
 }
 
