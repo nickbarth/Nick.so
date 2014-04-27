@@ -12,7 +12,7 @@
     <link href='//fonts.googleapis.com/css?family=Ubuntu:400,500,900,700' rel='stylesheet' type='text/css'>
     <link href="/styles/application.css" rel="stylesheet" type="text/css"/>
   </head>
-  <body>
+  <body id="top">
     <header class="navbar">
       <div class="container">
         <div class="navbar-header">
@@ -22,7 +22,7 @@
         </div>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="/blog/">Blog</a></li>
-          <li><a href="#projects">Projects</a></li>
+          <li><a data-scroll href="#projects">Projects</a></li>
         </ul>
       </div>
     </header>
@@ -93,15 +93,17 @@
         <div class="row">
           <div class="col-md-12 text-center">
             <a class="bottom hide" target="_blank" href="mailto:nick@nick.so"><h2>hello@nick.so</h2></a>
-            <a class="bottom text-center" href="#top"><h2><i class="fa fa-chevron-up"></i> up</h2></a>
+            <a data-scroll class="bottom text-center" href="#top"><h2><i class="fa fa-chevron-up"></i> up</h2></a>
             <img src="/images/selfie.png">
           </div>
         </div>
       </div>
     </footer>
     <script type="text/javascript" src="/scripts/skrollr.min.js"></script>
+    <script type="text/javascript" src="/scripts/smooth-scroll.js"></script>
     <script type="text/javascript">
-      var s = skrollr.init();
+      skrollr.init();
+      smoothScroll.init({ speed: 500, easing: 'easeInOutQuad', updateURL: false, offset: 0 });
     </script>
   </body>
 </html>
