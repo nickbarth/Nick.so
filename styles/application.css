@@ -132,3 +132,10 @@ img {
   margin-bottom: 20px;
   display: block;
 }
+
+.gist {
+  color: #000;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}

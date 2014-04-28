@@ -38,7 +38,7 @@
       <div class="color">
         <div class="container">
           <div class="hero-text">
-            <h2>Pixel Crafter and Bit Worker.</h2>
+            <h2>Word Smithings.</h2>
           </div>
         </div>
       </div>
@@ -53,7 +53,7 @@
               <p>
                 Need a quick Post Hook HTTP End Point? Bam! One line of bash!
               </p>
-              <h3>while true; do nc -w 0 -l 9000; git pull; done</h3>
+              <script src="https://gist.github.com/nickbarth/604a20e1dcebc379caa7.js"></script>
             </div>
             <div class="post">
               <h2 class="title">Ports and Netcats</h2>
@@ -63,19 +63,18 @@
                 tools for web development as much as they are for dev ops. Here's
                 a few quick useful commands.
               </p>
-              <h3>ssh -NL 9000:localhost:9000 root@example.com</h3>
+              <script src="https://gist.github.com/nickbarth/3a70b4eb561fc11816e5.js"></script>
               <p>
                 This command lets you forward a remote port to your localhost so,
                 you'll be able to access localhost:9000 in your browser.
               </p>
-              <h3>ssh -NR 9000:localhost:9000 root@example.com</h3>
+              <script src="https://gist.github.com/nickbarth/72e5f7959c7e197b0b94.js"></script>
               <p>
                 This command lets you serve whatever is running on your local
                 9000 port to your server. This could be useful for developing
                 a database locally.
               </p>
-              <h3>socat TCP-LISTEN:5000,fork TCP:localhost:9000</h3>
-              <h3>nc -lp 5000 < backpipe | nc localhost 9000 > backpipe</h3>
+              <script src="https://gist.github.com/nickbarth/a0bcfb135c9115ba714d.js"></script>
               <p>
                 Socat is useful when streaming data from one port to another.
                 Alternatively, you could backpipe the data with netcat, but
