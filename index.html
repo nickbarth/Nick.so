@@ -107,7 +107,7 @@
     <script type="text/javascript" src="/scripts/smooth-scroll.js"></script>
     <script type="text/javascript">
       skrollr.init();
-      smoothScroll.init({ speed: 500, easing: 'easeInOutQuad', updateURL: false, offset: 0 });
+      smoothScroll.init({ speed: 500, easing: 'easeInOutQuad', updateURL: false, offset: 0, mobileCheck: function () { return false } });
     </script>
   </body>
 </html>
