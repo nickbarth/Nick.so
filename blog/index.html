@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1; maximum-scale=1.0; user-scalable=no;">
 
     <title>Nick Barth</title>
 
@@ -13,17 +13,25 @@
     <link href="/styles/application.css" rel="stylesheet" type="text/css"/>
   </head>
   <body id="top">
-    <header class="navbar">
+    <header class="navbar navbar-default" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <a href="../" class="navbar-brand">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/" class="navbar-brand">
             NickBarth
           </a>
         </div>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/#projects">Projects</a></li>
-        </ul>
+        <nav class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/blog/">Blog</a></li>
+            <li><a data-scroll href="/#projects">Projects</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
     <div class="hero-unit" data-0="background-position: 0px 0px;" data-500="background-position: 0px -200px;">
@@ -119,10 +127,13 @@
         </div>
       </div>
     </footer>
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/scripts/skrollr.min.js"></script>
     <script type="text/javascript" src="/scripts/smooth-scroll.js"></script>
     <script type="text/javascript">
-      skrollr.init();
+      if (!(/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera))
+        skrollr.init();
       smoothScroll.init({ speed: 500, easing: 'easeInOutQuad', updateURL: false, offset: 0 });
     </script>
   </body>
