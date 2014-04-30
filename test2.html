@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+    <title>Nick Barth</title>
+
+    <link rel="stylesheet" href="effeckt.css">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #info, #info2 {
+        background: rgba(0, 0, 0, 0);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+      #background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -2;
+      }
+      .page {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        z-index: -1;
+      }
+      #page2 {
+        width: 100%;
+        height: 100%;
+        background: rgba(255,255,255, 1.0);
+      }
+      .hide {
+        display: none;
+      }
+      button {
+        height: 200px;
+        width: 200px;
+        margin-top: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="info"></div>
+    <div id="info2">
+    </div>
+
+    <div id="page1" data-effeckt-page="page1" class="page">
+      <h1>Hi There</h1>
+      <button class="effeckt-page-transition-button" data-effeckt-transition-in="scale-up-from-behind" data-effeckt-transition-out="scale-up-to-front" data-effeckt-transition-page="page2" data-effeckt-needs-perspective="true">Scale Up From Behind</button>
+      <button class="effeckt-page-transition-button" data-effeckt-transition-in="scale-down-from-front" data-effeckt-transition-out="scale-down-to-behind" data-effeckt-transition-page="page2" data-effeckt-needs-perspective="true">Scale Down From Front</button>
+    </div>
+
+    <div id="page2" data-effeckt-page="page2" class="page">
+      <h1>Whats up</h1>
+    </div>
+
+    <canvas id="background"></canvas>
+    <script>
+      /*
+      window.requestAnimFrame = (function(){
+        return window.requestAnimationFrame ||
+          window.webkitRequestAnimationFrame ||
+          window.mozRequestAnimationFrame    ||
+          window.oRequestAnimationFrame      ||
+          window.msRequestAnimationFrame     ||
+          function (callback, element) {
+            window.setTimeout(callback, 1000 / 60);
+          };
+      })();
+      */
+
+      var info = document.getElementById('info');
+
+      var w = window.innerWidth;
+      var h = window.innerHeight;
+      var canvas = document.getElementById('background');
+
+      canvas.width = w;
+      canvas.height = h;
+
+      var context = canvas.getContext('2d');
+      var image = new Image();
+      var loaded = false;
+
+      image.src = '/images/si.gif';
+      image.onload = function () {
+        loaded = true;
+      }
+
+      var x = 0;
+      var y = 0;
+
+      var mouseX = 0;
+      var mouseY = 0;
+
+      var mouseXP = 0;
+      var mouseYP = 0;
+
+      document.onmousemove = function (event) {
+        mouseX = event.clientX + document.body.scrollLeft;
+        mouseY = event.clientY + document.body.scrollTop;
+      }
+
+      function draw () {
+        var pattern = context.createPattern(image, 'repeat');
+        var gradient = null;
+
+        context.fillStyle = pattern;
+
+        context.save();
+        context.translate(x, y);
+        context.fillRect(-x, -y, canvas.width, canvas.height);
+        context.restore();
+
+        mouseXP = parseInt(mouseX/w*100, 10);
+        mouseYP = parseInt(mouseY/h*100, 10);
+
+          gradient = context.createLinearGradient(mouseX, mouseY, h*0.8, w*0.8);
+          gradient.addColorStop(0, 'rgba(52, 152, 219, 0.7)');
+          gradient.addColorStop(1, 'rgba(46, 204, 113,0.7)');
+
+
+        context.fillStyle = gradient;
+        context.fillRect(0, 0, w, h);
+
+        if (mouseXP < 20) x -= 1;
+        if (mouseXP < 40) x -= 1;
+        if (mouseXP < 50) x -= 1;
+        if (mouseXP > 50) x += 1;
+        if (mouseXP > 60) x += 1;
+        if (mouseXP > 80) x += 1;
+
+        if (mouseYP < 20) y -= 1;
+        if (mouseYP < 40) y -= 1;
+        if (mouseYP < 50) y -= 1;
+        if (mouseYP > 50) y += 1;
+        if (mouseYP > 60) y += 1;
+        if (mouseYP > 80) y += 1;
+
+        info.innerHTML = mouseX + "x " + mouseY + "y <br>";
+        info.innerHTML += w + "x " + h + "y<br>" ;
+        info.innerHTML += mouseXP + "%x " + mouseYP + "%y";
+      }
+
+      function animate () {
+        window.webkitRequestAnimationFrame(animate);
+        if (loaded) draw();
+      }
+
+      animate();
+    </script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+    <script src="effeckt.js"></script>
+    <script src="page-transitions.js"></script>
+  </body>
+</html>
