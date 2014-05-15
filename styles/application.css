@@ -6,10 +6,17 @@
   text-decoration: none !important;
 }
 
+.navbar {
+  background: blank !important;
+  border: none !important;
+}
+
 body {
   font-family: 'Ubuntu', serif;
   font-weight: normal;
   font-style: normal;
+  background: #fff;
+  abackground: url(/images/si.gif);
 }
 
 a {
@@ -24,8 +31,14 @@ a:hover {
 h1, h2, h3, h4 {
 }
 
+h1.big {
+  font-size: 120px;
+}
+
 .navbar {
+  background: #fff;
   margin-bottom: 0;
+  border-radius: 0;
 }
 
 .brand {
@@ -38,27 +51,29 @@ h1, h2, h3, h4 {
 }
 
 .navbar-brand {
-  color: #000;
+  color: #000!important;
   font-size: 30px;
 }
 
+.navbar-nav a {
+  color: #555!important;
+}
+
 main {
-  background: #fff;
+  background: none;
 }
 
 .hero-unit {
-  background: #fac960;
   width: 100%;
   color: #fff;
   height: 500px;
-  background: url(/images/desk.jpg);
-  background-size: cover;
+  background: url(/images/ahoy.jpg);
+  abackground-size: cover;
   position: relative;
 }
 
 .hero-unit .color {
-  background: rgba(100, 200, 240, 0.8);
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(100, 200, 240, 0.9);
   height: 100%;
 }
 
