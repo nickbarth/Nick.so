@@ -83,6 +83,7 @@
       if (!(/Android|iPhone|iPad|iPod|BlackBerry/i).test(navigator.userAgent || navigator.vendor || window.opera))
         skrollr.init();
       smoothScroll.init({ speed: 500, easing: 'easeInOutQuad', updateURL: false, offset: 0 });
+      x = 0; var y = 0; setInterval(function () {x++; y++; document.querySelector(".hero-unit").style.backgroundPosition = x + "px " + y + "px" }, 25);
     </script>
   </body>
 </html>
