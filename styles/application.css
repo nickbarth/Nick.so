@@ -7,7 +7,7 @@
 }
 
 .navbar {
-  background: blank !important;
+  background: none !important;
   border: none !important;
 }
 
@@ -36,16 +36,17 @@ h1.big {
 }
 
 .navbar {
-  background: #fff;
+  background: none;
   margin-bottom: 0;
   border-radius: 0;
+  margin-top: 10px;
 }
 
 .brand {
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  background: #fac960;
+  background: blank;
   border: 5px solid #fac960;
   color: #fff;
 }
@@ -53,10 +54,33 @@ h1.big {
 .navbar-brand {
   color: #000!important;
   font-size: 30px;
+  transition: all 160ms ease-in-out;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.2,1.2);
 }
 
 .navbar-nav a {
-  color: #555!important;
+  color: #888!important;
+  border: 1px solid #ddd;
+  display: block;
+  text-align: center;
+  vertical-align: top;
+  padding: 10px 20px !important;
+  border-radius: 5px;
+  margin: 0;
+  transition: all 160ms ease-in-out;
+}
+
+.navbar-nav a:hover  {
+  background: #fdfdfd!important;
+  color: #ccc!important;
+}
+
+.navbar-nav a:active  {
+  background: #fff!important;
+  color: #000!important;
 }
 
 main {
@@ -67,14 +91,9 @@ main {
   width: 100%;
   color: #fff;
   height: 500px;
-  background: url(/images/ahoy.jpg);
-  abackground-size: cover;
+  background: url(/images/ahoy_blue.png);
   position: relative;
-}
-
-.hero-unit .color {
-  background: rgba(100, 200, 240, 0.9);
-  height: 100%;
+  margin: 5px 0 0;
 }
 
 .hero-text {
@@ -86,6 +105,23 @@ main {
   color: rgba(0, 0, 0, 0.6);
   color: rgba(255, 255, 255, 0.9);
   font-size: 100px;
+  padding: 30px;
+}
+
+.social li, .social li a {
+  margin: 0;
+  transition: all 160ms ease-in-out;
+  transform: scale(1.0, 1.0);
+}
+
+.social li:hover,  .social li:hover a {
+  transform: scale(1.1, 1.1);
+  color: #bbb;
+  color: #86caea;
+}
+
+.social li {
+  margin: 0 5px;
 }
 
 @media (max-width: 768px) {
