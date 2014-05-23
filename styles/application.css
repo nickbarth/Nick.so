@@ -16,7 +16,14 @@ body {
   font-weight: normal;
   font-style: normal;
   background: #fff;
-  abackground: url(/images/si.gif);
+}
+
+body.home {
+  top: 50%;
+  position: absolute;
+  width: 100%;
+  transform: translate3d(0, -50%, 0);
+  transform-origin: 0 50%;
 }
 
 a {
