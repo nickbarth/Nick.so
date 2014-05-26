@@ -6,6 +6,10 @@
   text-decoration: none !important;
 }
 
+::selection {
+  background: #b1acff;
+}
+
 .navbar {
   background: none !important;
   border: none !important;
